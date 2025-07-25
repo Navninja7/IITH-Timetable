@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        table {
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            /* background-color: #4CAF50; */
+            /* color: white; */
+        }
+        td div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f9f9f9;
+        }
+        .no-wrap{
+            white-space:nowrap;
+        }
+
+        .courses{
+            display: flex;
+            justify-content:space-around;
+            height:auto;
+            width:100%;
+            padding:20px;
+            background-color: lightblue;
+        }
+
+        .info{
+            position:absolute;
+            height: auto;
+            width: 150px;
+        }
+        #image-holder{
+            position:absolute;
+            min-height:75px;
+            width:150px;
+            background-color: blue;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IITH Timetable</title>
+</head>
+<body>
+
+    <div class="courses">
+        <div class="course-list">
+<p>Theory basket</p>
+            <input type="checkbox" id="CS6013" name="Advanced Data Structures and Algorithms"><label for="CS6013">CS6013: Advanced Data Structures and Algorithms</label><br>
+            <input type="checkbox" id="CS6160" name="Cryptology"><label for="CS6160">CS6160: Cryptology</label><br>
+            <input type="checkbox" id="CS5610" name="Computational Number Theory and Algebra"><label for="CS5610">CS5610: Computational Number Theory and Algebra</label><br>
+            <input type="checkbox" id="CS5100" name="Quantum Computing"><label for="CS5100">CS5100: Quantum Computing</label><br>
+            <input type="checkbox" id="CS5040" name="Linear Optimization"><label for="CS5040">CS5040: Linear Optimization</label><br>
+        </div>
+        
+
+<div class="course-list">
+    
+<p>Systems basket</p>
+            <input type="checkbox" id="CS5103" name="Practical Malware Analysis"><label for="CS5103">CS5103: Practical Malware Analysis</label><br>
+            <input type="checkbox" id="CS5013" name="GPU Programming"><label for="CS5013">CS5013: GPU Programming</label><br>
+            <input type="checkbox" id="CS5260" name="Compiler Optimizations"><label for="CS5260">CS5260: Compiler Optimizations</label><br>
+            <input type="checkbox" id="CS5363" name="Advanced Computer Architecture"><label for="CS5363">CS5363: Advanced Computer Architecture</label><br>
+            <input type="checkbox" id="CS5553" name="Wireless Networks and Security"><label for="CS5553">CS5553: Wireless Networks and Security</label><br>
+            <input type="checkbox" id="CS5060" name="Advanced Computer Networks"><label for="CS5060">CS5060: Advanced Computer Networks</label><br>
+</div>
+
+<div class="course-list">
+
+<p>Data Science basket</p>
+<input type="checkbox" id="CS3390" name="Foundations of Machine Learning"><label for="CS3390">CS3390: Foundations of Machine Learning</label><br>
+<input type="checkbox" id="CS6113" name="Representation Learning"><label for="CS6113">CS6113: Representation Learning</label><br>
+<input type="checkbox" id="CS5600" name="Data Mining"><label for="CS5600">CS5600: Data Mining</label><br>
+<input type="checkbox" id="CS6803" name="Topics in Natural Language Processing"><label for="CS6803">CS6803: Topics in Natural Language Processing</label><br>
+
+</div>
+    </div>
+    <table>
+        <tr>
+            <th></th>
+            <th>9:00 - 9:55</th>
+            <th>10:00 - 10:55</th>
+            <th>11:00 - 11:55</th>
+            <th>12:00 - 12:55</th>
+            <th>12:55 - 14:30</th>
+            <th>14:30 - 15:55</th>
+            <th>16:00 - 17:25</th>
+            <th>17:30 - 19:00</th>
+            <th>19:00 - 20:30</th>
+        </tr>
+
+
+        <!-- Monday -->
+
+        <tr>
+            <td class="normal" rowspan="2">Mon</td>
+            <td class="normal">
+                    <p class="no-wrap">A</p>
+                    <p class="no-wrap">CS5363(CS-LH1)</p>
+                    <p class="no-wrap">CS5040(A-LH2)</p>
+
+
+                
+            </td>
+            <td class="normal">
+                
+      <p class="no-wrap">B</p>
+<p class="no-wrap">CS2233(CS-LH2)</p>
+<p class="no-wrap">CS3423(CS-LH1)</p>
+<p class="no-wrap">CS6160(CS-LH3)</p>
+                
+            </td>
+            <td class="normal">
+                
+      <p class="no-wrap">C</p>
+<p class="no-wrap">CS1010(LHC-04)</p>
+<p class="no-wrap">CS5013(CS-LH3)</p>
+                
+            </td>
+            <td class="normal" rowspan="2">
+                
+      <p class="no-wrap">D</p>              
+<p class="no-wrap">CS3390(A-LH2)</p>
+<p class="no-wrap">CS5590(A-LH2)</p>
+<p class="no-wrap">CS5260(CS-LH2)</p>
+                
+            </td>
+            <td class="normal" ROWSPAN="10">
+                
+LUNCH
+                
+            </td>
+            <td class="normal">
+                
+<p class="no-wrap">P</p>              
+<p class="no-wrap">ID2230(LHC-06)</p>
+<p class="no-wrap">CS2323(Lab)</p>
+<p class="no-wrap">CS5103(CS-LH2)</p>
+                
+            </td>
+            <td class="normal">
+       <p class="no-wrap">Q</p>
+<p class="no-wrap">CS3510(LHC-04)</p>
+<p class="no-wrap">CS5060(CS-LH2)</p>
+<p class="no-wrap">CS6113(CS-LH3)</p>
+<p class="no-wrap">CS5100(CS-LH1)</p>
+            </td>
+            <td class="normal" rowspan="2">W</td>
+            <td class="normal" rowspan="2">X</td>
+        </tr>
+        <tr>
+            <td class="normal" colspan="3">FN1</td>
+            <td class="normal" colspan="3">AN1</td>
+        </tr>
+
+
+        <!-- Tuesday -->
+        <tr>
+            <td class="normal" rowspan="2">Tue</td>
+            <td class="normal">
+                    <p class="no-wrap">D</p>              
+<p class="no-wrap">CS3390(A-LH2)</p>
+<p class="no-wrap">CS5590(A-LH2)</p>
+<p class="no-wrap">CS5260(CS-LH2)</p>
+
+
+                
+            </td>
+            <td class="normal">
+                
+      <p class="no-wrap">E</p>
+<p class="no-wrap">CS1000(LHC-03)</p>
+<p class="no-wrap">CS2323(A-LH2)</p>
+<p class="no-wrap">CS5320(CS-LH2)</p>
+<p class="no-wrap">CS5610(CS-LH1)</p>
+                
+            </td>
+            <td class="normal">
+                
+      <p class="no-wrap">F</p>
+<p class="no-wrap">CS5600(A-LH2)</p>
+                
+            </td>
+            <td class="normal" rowspan="2">    
+      <p class="no-wrap">G</p>              
+<p class="no-wrap">CS6013(LHC-03)</p>
+                
+            </td>
+            
+            <td class="normal">
+                
+<p class="no-wrap">R</p>              
+<p class="no-wrap">CS3550(LHC-04)</p>
+<p class="no-wrap">CS6803(CS-LH3)</p>
+<p class="no-wrap">CS5760(CS-605)</p>
+                
+            </td>
+            <td class="normal">
+       <p class="no-wrap">S</p>
+<p class="no-wrap">CS3530(CS-LH2)</p>
+<p class="no-wrap">CS5553(CS-LH3)</p>
+            </td>
+            <td class="normal" rowspan="2">Y</td>
+            <td class="normal" rowspan="2">Z</td>
+        </tr>
+        <tr>
+            <td class="normal" colspan="3">FN2</td>
+            <td class="normal" colspan="3">AN2</td>
+        </tr>
+
+
+        <!-- Wednesday -->
+        <tr>
+            <td class="normal" rowspan="2">Wed</td>
+            <td class="normal">
+      <p class="no-wrap">B</p>
+<p class="no-wrap">CS2233(CS-LH2)</p>
+<p class="no-wrap">CS3423(CS-LH1)</p>
+<p class="no-wrap">CS6160(CS-LH3)</p>              
+                
+            </td>
+            <td class="normal">
+                <p class="no-wrap">C</p>
+<p class="no-wrap">CS1010(LHC-04)</p>
+<p class="no-wrap">CS5013(CS-LH3)</p>
+      
+                
+            </td>
+            <td class="normal">
+<p class="no-wrap">A</p>
+                    <p class="no-wrap">CS5363(CS-LH1)</p>
+                    <p class="no-wrap">CS5040(A-LH2)</p>
+                
+            </td>
+            <td class="normal" rowspan="2">
+                
+      <p class="no-wrap">G</p>              
+<p class="no-wrap">CS6013(LHC-03)</p>
+                
+            </td>
+            
+            <td class="normal">
+                
+<p class="no-wrap">F</p>
+<p class="no-wrap">CS5600(A-LH2)</p>
+                
+            </td>
+            <td class="normal">
+       
+            </td>
+            <td class="normal" rowspan="2"></td>
+            <td class="normal" rowspan="2"></td>
+        </tr>
+        <tr>
+            <td class="normal" colspan="3">FN3</td>
+            <td class="normal" colspan="3">AN3</td>
+        </tr>
+
+
+        <!-- Thursday -->
+        <tr>
+            <td class="normal" rowspan="2">Thu</td>
+            <td class="normal">
+                <p class="no-wrap">C</p>
+<p class="no-wrap">CS1010(LHC-04)</p>
+<p class="no-wrap">CS5013(CS-LH3)</p>
+                    
+
+
+                
+            </td>
+            <td class="normal">
+                <p class="no-wrap">A</p>
+                    <p class="no-wrap">CS5363(CS-LH1)</p>
+                    <p class="no-wrap">CS5040(A-LH2)</p>
+      
+                
+            </td>
+            <td class="normal">
+      <p class="no-wrap">B</p>
+<p class="no-wrap">CS2233(CS-LH2)</p>
+<p class="no-wrap">CS3423(CS-LH1)</p>
+<p class="no-wrap">CS6160(CS-LH3)</p>          
+                
+            </td>
+            <td class="normal" rowspan="2">
+                
+      <p class="no-wrap">E</p>
+<p class="no-wrap">CS1000(LHC-03)</p>
+<p class="no-wrap">CS2323(A-LH2)</p>
+<p class="no-wrap">CS5320(CS-LH2)</p>
+<p class="no-wrap">CS5610(CS-LH1)</p>
+                
+            </td>
+            
+            <td class="normal">
+       <p class="no-wrap">Q</p>
+<p class="no-wrap">CS3510(LHC-04)</p>
+<p class="no-wrap">CS5060(CS-LH2)</p>
+<p class="no-wrap">CS6113(CS-LH3)</p>
+<p class="no-wrap">CS5100(CS-LH1)</p>         
+
+                
+            </td>
+            <td class="normal">
+       <p class="no-wrap">P</p>              
+<p class="no-wrap">ID2230(LHC-06)</p>
+<p class="no-wrap">CS2323(Lab)</p>
+<p class="no-wrap">CS5103(CS-LH2)</p>
+            </td>
+            <td class="normal" rowspan="2">W</td>
+            <td class="normal" rowspan="2">X</td>
+        </tr>
+        <tr>
+            <td class="normal" colspan="3">FN4</td>
+            <td class="normal" colspan="3">AN4</td>
+        </tr>
+
+
+
+        <!-- Friday -->
+        <tr>
+            <td class="normal" rowspan="2">Fri</td>
+            <td class="normal">
+                    <p class="no-wrap">E</p>
+<p class="no-wrap">CS1000(LHC-03)</p>
+<p class="no-wrap">CS2323(A-LH2)</p>
+<p class="no-wrap">CS5320(CS-LH2)</p>
+<p class="no-wrap">CS5610(CS-LH1)</p>
+
+
+                
+            </td>
+            <td class="normal">
+                
+      <p class="no-wrap">F</p>
+<p class="no-wrap">CS5600(A-LH2)</p>
+                
+            </td>
+            <td class="normal">
+                
+      <p class="no-wrap">D</p>              
+<p class="no-wrap">CS3390(A-LH2)</p>
+<p class="no-wrap">CS5590(A-LH2)</p>
+<p class="no-wrap">CS5260(CS-LH2)</p>
+                
+            </td>
+            <td class="normal" rowspan="2">
+                
+      <p class="no-wrap">G</p>              
+<p class="no-wrap">CS6013(LHC-03)</p>
+                
+            </td>
+            
+            <td class="normal">
+                
+<p class="no-wrap">S</p>
+<p class="no-wrap">CS3530(CS-LH2)</p>
+<p class="no-wrap">CS5553(CS-LH3)</p>
+                
+            </td>
+            <td class="normal">
+       <p class="no-wrap">R</p>              
+<p class="no-wrap">CS3550(LHC-04)</p>
+<p class="no-wrap">CS6803(CS-LH3)</p>
+<p class="no-wrap">CS5760(CS-605)</p>
+            </td>
+            <td class="normal" rowspan="2">Y</td>
+            <td class="normal" rowspan="2">Z</td>
+        </tr>
+        <tr>
+            <td class="normal" colspan="3">FN5</td>
+            <td class="normal" colspan="3">AN5</td>
+        </tr>
+    </table>
+
+    <div class="info" id="info">
+<p id="course-name"> </p>
+<p id="venue"></p>
+        <div id="image-holder">
+            
+        </div>
+    </div>
+</body>
+
+
+
+<script>
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    const tds = document.querySelectorAll('td');
+    const selectedCourses = [];
+
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+            if (checkbox.checked) {
+                tds.forEach(td => {
+                    for(let i=0;i<td.children.length;i++){
+                        if(td.children[i].textContent.includes(checkbox.id)){
+                            td.children[i].style.backgroundColor = 'dodgerblue';
+                            td.children[i].style.color = 'white';
+                            td.children[i].style.fontWeight = 'bold';
+                            td.style.backgroundColor = 'lightgreen';
+                            td.classList.replace('normal', 'highlighted');
+                            td.setAttribute('course-name', checkbox.name);
+                            td.setAttribute('place',td.children[i].textContent.split('(')[1].split(')')[0]);
+                            if(td.children[i].textContent.includes('(CS')){
+                                td.setAttribute('venue','CS');
+                            } else if(td.children[i].textContent.includes('(A')){
+                                td.setAttribute('venue','A');
+                            } else if(td.children[i].textContent.includes('(LHC')){
+                                td.setAttribute('venue','LHC');
+                            } else {
+                                td.setAttribute('venue','Other');
+                            }
+                            
+                            // selectedCourses.push(checkbox.id);
+                        }
+                    }
+                    
+                });
+            } else {
+                tds.forEach(td => {
+                    for(let i=0;i<td.children.length;i++){
+                        if(td.children[i].textContent.includes(checkbox.id)){
+                            td.children[i].style.backgroundColor = '';
+                            td.children[i].style.color = '';
+                            td.children[i].style.fontWeight = 'normal';
+                            td.style.backgroundColor = '';
+                            // selectedCourses.push(checkbox.id);
+                        }
+                    }
+                    
+                });
+                
+            }
+            console.log(selectedCourses);
+        });
+    });
+
+    const info = document.getElementById('info');
+    const imageHolder = document.getElementById('image-holder');
+
+window.addEventListener('mousemove', (e) => {
+    info.style.left = `${e.pageX - 150}px`;
+    info.style.top = `${e.pageY - 150}px`;
+
+
+    document.querySelectorAll('.highlighted').forEach(td => {
+        td.addEventListener('mouseover', (e) => {
+
+            info.style.opacity = '1';
+            if(td.getAttribute('venue') === 'CS'){
+                imageHolder.style.background = "url('CSE-building IITH.jpg')";
+            } else if(td.getAttribute('venue') === 'A'){
+                imageHolder.style.background = "url('Academic Block A IITH.webp')";
+            } else if(td.getAttribute('venue') === 'LHC'){
+                imageHolder.style.background = "url('LHC IITH.jpg')";
+            } else {
+                // imageHolder.style.background = "url('Other IITH.jpg')";
+            }
+            document.getElementById('course-name').innerHTML = 'Course: ' + td.getAttribute('course-name');
+            document.getElementById('venue').innerHTML = 'Venue: ' + td.getAttribute('place');
+            imageHolder.style.backgroundSize = 'cover';
+            info.style.backgroundColor = 'orange';
+            info.style.color = 'white';
+            // info.textContent = td.textContent;
+        });
+        
+    });
+
+        document.querySelectorAll('.normal').forEach(td => {
+        td.addEventListener('mouseover', (e) => {
+            info.style.opacity = '0';
+
+        });
+        });
+});
+    
+    
+        
+
+
+</script>
+</html>
